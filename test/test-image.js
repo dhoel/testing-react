@@ -15,7 +15,6 @@ describe('Image component', function() {
         renderer.render(<Image url={url} description={description} />);
         const result = renderer.getRenderOutput();
         result.props.className.should.equal('gallery-image');
-        console.log(result.props);
         const img = result.props.children[0];
         img.type.should.equal('img');
         img.props.src.should.equal(url);

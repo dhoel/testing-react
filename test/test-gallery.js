@@ -13,6 +13,7 @@ describe('Testing Gallery component', function() {
     renderer.render(<Gallery images={GALLERY_TEST} />);
     const result = renderer.getRenderOutput();
     result.props.className.should.equal('gallery');
-    console.log(result.props);
+    const images = result.props.children;
+    images.length.should.equal(GALLERY_TEST.length);
   })
 })
